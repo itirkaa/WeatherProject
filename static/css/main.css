@@ -1,0 +1,419 @@
+/* Gradients */
+.cloudy-gr {
+  background-image: linear-gradient(to left bottom, #ebd9c3, #d4c3b1, #bdaea0, #a7998f, #90857e);
+}
+
+.night-gr {
+  background-image: linear-gradient(to left bottom, #2d455d, #283e5a, #253656, #242e51, #24264c);
+}
+
+.rain-gr {
+  background-image: linear-gradient(to left bottom, #716f9e, #5c5a82, #484667, #34334d, #222134);
+}
+
+.snow-gr {
+  background-image: linear-gradient(to left bottom, #afb7d0, #8e98b5, #6d7a9b, #4d5d82, #2d4269);
+}
+
+.sunny-gr {
+  background-image: linear-gradient(to left bottom, #fee069, #ebb54c, #d48b36, #b96326, #9c3b1a);
+}
+
+
+/* Box Shadow */
+.cloudy-bx {
+  box-shadow: 0px 0px 25px 5px rgba(47, 34, 43, 0.8);
+}
+
+.night-bx {
+  box-shadow: 0px 0px 25px 5px rgba(38, 47, 76, 0.8);
+}
+
+.rain-bx {
+  box-shadow: 0px 0px 25px 5px rgba(11, 11, 17, 0.8);
+}
+
+.snow-bx {
+  box-shadow: 0px 0px 25px 5px rgba(22, 43, 83, 0.8);
+}
+
+.sunny-bx {
+  box-shadow: 0px 0px 25px 5px rgba(40, 0, 3, 0.8);
+}
+
+
+/* Background Color (Message Box) */
+.cloudy-bg {
+  background-color: rgba(47, 34, 43, 0.6);
+}
+
+.night-bg {
+  background-color: rgba(38, 47, 76, 0.6);
+}
+
+.rain-bg {
+  background-color: rgba(11, 11, 17, 0.6);
+}
+
+.snow-bg {
+  background-color: rgba(22, 43, 83, 0.8);
+}
+
+.sunny-bg {
+  background-color: rgba(40, 0, 3, 0.6);
+}
+
+
+/* Background Image (Message Box) */
+.cloudy-img {
+  background-image: url('cloudy-temp.png');
+}
+
+.night-img {
+  background-image: url('night.jpg');
+}
+
+.rain-img {
+  background-image: url('rain.png');
+}
+
+.snow-img {
+  background-image: url('snow.png');
+}
+
+.sunny-img {
+  background-image: url('sunny.jpg');
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: rgba(255, 255, 255, 1);
+}
+
+
+/* -Header */
+header {
+  background-color: rgba(0, 0, 0, 0.4);
+  flex: 0.1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-weight: 400;
+  margin: 0rem 2rem;
+}
+
+header i {
+  font-size: 1.25rem;
+  margin: 0rem 2rem;
+}
+
+header a:link {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+}
+
+header a:visited {
+  color: rgba(255, 255, 255, 1) !important;
+}
+/* Header- */
+
+
+/* -Section */
+section {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Section- */
+
+
+/* -Weather Box */
+.weather-box {
+  background-color: rgba(0, 0, 0, 0.4);
+
+  display: flex;
+  height: 450px;
+  width: 720px;
+}
+/* Weather Box- */
+
+
+/* -Wrapper */
+.wrapper {
+  width: 60%;
+
+  display: flex;
+  flex-direction: column;
+}
+/* Wrapper- */
+
+
+/* -Message Box */
+.message {
+  height: 10%;
+  font-size: 1.5rem;
+  overflow: hidden;
+  transition: all 0.8s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message .text {
+  display: none;
+  margin: 0rem 1rem;
+  text-align: center;
+}
+
+.message:hover {
+  height: 100%;
+}
+
+.message:hover .icon{
+  display: none;
+}
+
+.message:hover .text {
+  display: block;
+}
+
+.message:hover + .info {
+  height: 0;
+}
+
+.message:active {
+  height: 100%;
+}
+
+.message:active .icon{
+  display: none;
+}
+
+.message:active .text {
+  display: block;
+}
+
+.message:active + .info {
+  height: 0;
+}
+/* Message Box- */
+
+
+/* -Info Box*/
+.info {
+  height: 90%;
+  overflow: hidden;
+}
+
+.data-1 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 1rem 1.25rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.data-2 {
+  font-size: 4rem;
+  margin: 1.5rem 1.25rem;
+  text-align: center;
+
+  display: flex;
+}
+
+.data-2 .weather-img {
+  margin-left: 1rem;
+}
+
+.data-2 .weather-img img {
+  height: 64px;
+  width: 64px;
+}
+
+.data-3 {
+  font-weight: 300;
+  padding: 1.4rem 1.25rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.data-3 .data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.data-3 .data-container > div {
+  padding: 0.5rem 0rem;
+}
+
+.data-3 .data-container .weather-img-sm img{
+  height: 32px;
+  width: 32px;
+}
+/* Info Box- */
+
+
+/* -Image */
+.image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 40%;
+}
+/* Image- */
+
+
+/* -Media Queries */
+@media screen and (max-width: 330px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-size: 11px;
+  }
+
+  .weather-box {
+    flex-direction: column;
+
+    height: 420px;
+    width: 280px;
+  }
+
+  .wrapper {
+    height: 70%;
+    width: 100%;
+  }
+
+  .message {
+    height: 10%;
+  }
+
+  .info {
+    height: 90%;
+  }
+
+  .data-1 {
+    align-items: center;
+    margin: 0.5rem;
+  }
+
+  .data-2 {
+    justify-content: center;
+    margin: 0.5rem;
+  }
+
+  .data-3 {
+    font-weight: 400;
+    padding: 0.9rem;
+  }
+
+  .image {
+    height: 30%;
+    width: 100%;
+  }
+
+  .night-img {
+    background-image: url('night.jpg');
+    background-position: bottom !important;
+  }
+
+  .snow-img {
+    background-image: url('snow.png');
+    background-position: initial !important;
+  }
+}
+
+@media screen and (min-width: 330.5px) and (max-width: 575.98px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-size: 12px;
+  }
+
+  .weather-box {
+    flex-direction: column;
+
+    height: 520px;
+    width: 320px;
+  }
+
+  .wrapper {
+    height: 60%;
+    width: 100%;
+  }
+
+  .message {
+    height: 13%;
+  }
+
+  .info {
+    height: 87%;
+  }
+
+  .data-1 {
+    align-items: center;
+    margin: 0.5rem;
+  }
+
+  .data-2 {
+    justify-content: center;
+    margin: 0.5rem;
+  }
+
+  .data-3 {
+    font-weight: 400;
+    padding: 1.4rem 1rem;
+  }
+
+  .data-3 .data-container > div {
+    padding: 0.35rem 0rem;
+  }
+
+  .image {
+    height: 40%;
+    width: 100%;
+  }
+
+  .night-img {
+    background-image: url('night.jpg');
+    background-position: bottom !important;
+  }
+
+  .snow-img {
+    background-image: url('snow.png');
+    background-position: initial !important;
+  }
+}
+
+/* Media Queries- */

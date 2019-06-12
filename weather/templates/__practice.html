@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/practice.css' %}" type="text/css">
+  <title>Mocking Weather</title>
+  <style>
+
+  </style>
+</head>
+<body class="night-gr">
+  <header class="night-bx">    
+    <a href="{% url 'home' %}"><h1>Mocking Weather</h1></a>
+    <a href="{% url 'info' %}"><i class="fas fa-info"></i></a>
+  </header>
+  <section>
+  
+    {% for weather in weather_data %}
+    <div class="weather-box night-bx">
+      <div class="wrapper">
+        <div class="message night-bg">
+          <div class="text">{{ weather.message }}</div>
+          <div class="icon"><i class="fas fa-angle-down"></i></div>
+        </div>
+        <div class="info">
+          <div class="data-1">
+            <div class="location">{{ weather.city }}</div>
+            <div class="description">{{ weather.description }}</div>
+          </div>
+          <div class="data-2">
+            <div class="temperature">{{ weather.temperature }}° C</div>
+            <div class="weather-img"><img src="http://openweathermap.org/img/w/{{ weather.icon }}.png"></div>
+          </div>
+          <div class="data-3 night-bg">
+            <div class="data-container">
+              <div class="icon"><i class="fas fa-temperature-high"></i>45&deg;</div>
+              <div class="icon"><i class="fas fa-temperature-low"></i>42&deg;</div>
+            </div>
+            <div class="data-container">
+              <div class="icon"><i class="fas fa-cloud-rain"></i>60%</div>
+              <div class="icon"><i class="fas fa-wind"></i>3K/hr</div>
+            </div>
+            <div class="data-container">
+              <div class="icon"><i class="fas fa-sun"></i>5:00AM</div>
+              <div class="icon"><i class="fas fa-cloud-sun"></i>6:30PM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="image night-img"></div>
+    </div>
+    {% endfor %}
+   
+  </section>
+  
+</body>
+</html>
